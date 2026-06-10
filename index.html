@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -58,12 +59,12 @@
     }
 
     .cover-img {
-      width: 220px;
+      width: 200px;
       border-radius: 4px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 40px rgba(201,168,76,0.15);
       position: relative;
       z-index: 1;
-      margin-bottom: 48px;
+      margin-bottom: 40px;
     }
 
     .hero-headline {
@@ -87,7 +88,20 @@
       max-width: 480px;
       position: relative;
       z-index: 1;
-      margin-bottom: 40px;
+      margin-bottom: 16px;
+    }
+
+    .stat-line {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 520px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 36px;
+      font-style: italic;
+      border-left: 2px solid var(--gold);
+      padding-left: 14px;
+      text-align: left;
     }
 
     .btn {
@@ -106,9 +120,17 @@
     .btn:hover { opacity: 0.88; }
 
     .btn-note {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--muted);
-      margin-top: 12px;
+      margin-top: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .anon-note {
+      font-size: 12px;
+      color: #6a6458;
+      margin-top: 8px;
       position: relative;
       z-index: 1;
     }
@@ -144,6 +166,24 @@
       margin: 0;
     }
 
+    /* EXCERPT */
+    .excerpt-box {
+      border-left: 2px solid var(--gold);
+      padding: 28px 32px;
+      background: var(--dark2);
+      font-style: italic;
+      color: #d8d0c0;
+      line-height: 1.85;
+      margin-bottom: 32px;
+    }
+
+    .excerpt-hook {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
     /* FOR WHOM */
     .forwhom-list {
       list-style: none;
@@ -167,16 +207,6 @@
       font-size: 24px;
       line-height: 1;
       top: 2px;
-    }
-
-    /* EXCERPT */
-    .excerpt-box {
-      border-left: 2px solid var(--gold);
-      padding: 28px 32px;
-      background: var(--dark2);
-      font-style: italic;
-      color: #d8d0c0;
-      line-height: 1.85;
     }
 
     /* CONTENTS */
@@ -308,16 +338,39 @@
 <section class="hero">
   <img src="cover.jpg" alt="Обложка книги Личное дно" class="cover-img" />
   <h1 class="hero-headline">
-    Снаружи всё идеально.<br>
-    А внутри бокал каждый вечер.<br>
-    <em>Уже не удовольствие. Необходимость.</em>
+    Бокал каждый вечер.<br>
+    Уже не расслабление.<br>
+    <em>Уже необходимость.</em>
   </h1>
   <p class="hero-sub">
     «Личное дно». Книга о женском высокофункциональном алкоголизме.<br>
     От первого лица. Без прикрас.
   </p>
-  <a href="https://t.me/lichnoedno_bot" class="btn">Читать первую главу бесплатно</a>
+  <p class="stat-line">
+    Каждая четвёртая женщина после 35 использует алкоголь как способ справляться с тревогой.<br>
+    Большинство из них никогда не назовут это алкоголизмом.
+  </p>
+  <a href="https://t.me/lichnoedno_bot" class="btn">Читать первую главу бесплатно →</a>
   <p class="btn-note">Полная книга — 990 ₽ внутри бота</p>
+  <p class="anon-note">Бот не публикует ничего. Оплата анонимная через ЮКасса. Никто не узнает.</p>
+</section>
+
+<hr class="divider" />
+
+<!-- EXCERPT -->
+<section>
+  <p class="section-label">Отрывок из книги — пролог</p>
+  <div class="excerpt-box">
+    <p>Эту ночь я помню фрагментами. Так всегда бывает с теми ночами, которые лучше бы не помнить вообще, но именно они почему-то остаются навсегда.</p>
+    <p>Лестница. Чужой подъезд. Я.</p>
+    <p>Падение было не красивым, не киношным. Не так, как героиня медленно оседает по стене с трагическим выражением лица. Это было то самое пьяное падение: неловкое, громкое, с полным отсутствием контроля над собственным телом.</p>
+    <p>Мои дети это видели.</p>
+    <p>Они не закричали. Они подхватили меня под руки, молча, слаженно, как будто уже знали, что делать. Как будто репетировали заранее.</p>
+    <p>Замечательная картина, правда? Успешная женщина. Хорошая мать. Специалист, которого ценят на работе. Человек, у которого всё под контролем...</p>
+  </div>
+  <p class="excerpt-hook">...Это не слабость характера. Это выученная беспомощность. Это отсутствие инструментов, которые никто не давал — потому что зачем, вот же готовый, в магазине за углом, работает немедленно.</p>
+  <a href="https://t.me/lichnoedno_bot" class="btn">Читать первую главу →</a>
+  <p class="anon-note" style="margin-top: 10px;">Бот не публикует ничего. Никто не узнает.</p>
 </section>
 
 <hr class="divider" />
@@ -332,17 +385,6 @@
     <li>Пробовала останавливаться сама. Не получалось, и ты не понимала почему.</li>
     <li>Ты не считаешь себя «алкоголичкой». Но что-то внутри уже давно знает, что что-то не так.</li>
   </ul>
-</section>
-
-<hr class="divider" />
-
-<!-- EXCERPT -->
-<section>
-  <p class="section-label">Отрывок из книги</p>
-  <div class="excerpt-box">
-    <p>Алкоголь работал. Я напишу это ещё раз, потому что это важно: алкоголь работал. Он снимал напряжение. Делал вечера мягче. Выключал тревожный фоновый шум в голове, тот нескончаемый список всего, что нужно сделать, о чём нужно подумать, за что нужно беспокоиться.</p>
-    <p>Это не слабость характера. Это выученная беспомощность. Это отсутствие инструментов, которые никто не давал, потому что зачем, вот же готовый, в магазине за углом, работает немедленно.</p>
-  </div>
 </section>
 
 <hr class="divider" />
@@ -394,9 +436,11 @@
 <!-- BUY -->
 <div class="buy-section">
   <h2>Это не про мгновенное спасение. Это про то, что происходит на самом деле, и что с этим можно сделать.</h2>
-  <p class="buy-sub">PDF сразу после оплаты. Безопасная оплата через ЮKassa.</p>
+  <p class="buy-sub">PDF сразу после оплаты. Безопасная оплата через ЮКасса.</p>
   <p class="price-tag">990 ₽</p>
-  <a href="https://t.me/lichnoedno_bot" class="btn">Читать первую главу бесплатно</a>
+  <a href="https://t.me/lichnoedno_bot" class="btn">Читать первую главу бесплатно →</a>
+  <p class="btn-note" style="margin-top: 12px;">Полная книга — 990 ₽ внутри бота</p>
+  <p class="anon-note" style="margin-top: 8px;">Бот не публикует ничего. Оплата анонимная. Никто не узнает.</p>
 </div>
 
 <footer>
